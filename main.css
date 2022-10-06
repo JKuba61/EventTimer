@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--first-color: #f9f9f9;
+	--second-color: #323335;
+	--bg-color2:#f9f9f986;
+	--bg-color: rgba(82, 82, 82, 0.5);
+	--border-color: rgba(0, 0, 0, 0.2);
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	color: var(--second-color);
+	background-color: var(--first-color);
+}
+.counter-app {
+	position: relative;
+}
+.app-body {
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+	height: 800px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+	/* overflow: hidden; */
+}
+.img-section {
+	position: relative;
+	height: 400px;
+	background-image: url('https://static.dw.com/image/60293932_303.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.settings-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 20px 30px;
+	font-size: 32px;
+	color: var(--second-color);
+	background-color: var(--bg-color2);
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.2s, color 0.2s;
+}
+.settings-btn:hover {
+	color: var(--first-color);
+	background-color: var(--bg-color);
+}
+.time-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 400px;
+	background-color: #fff;
+	border-radius: 10px;
+	z-index: 100;
+}
+h3 {
+	font-size: 24px;
+	text-align: center;
+}
+.time-cards {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 40px 0;
+	width: 18%;
+	text-align: center;
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+}
+.number {
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 48px;
+}
+.card-title {
+	text-align: center;
+}
+.settings {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	padding: 50px 30px;
+	width: 440px;
+	background-color: #fff;
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	opacity: 0;
+	transition: transform 0.4s, opacity 0.2s;
+}
+.active {
+	opacity: 1;
+	transform: translateX(460px);
+}
+h1 {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+label {
+	margin-bottom: 10px;
+}
+input {
+	margin-bottom: 30px;
+	padding: 10px 20px;
+	width: 100%;
+}
+.date {
+	text-align: center;
+}
+.save {
+	padding: 10px 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: var(--second-color);
+	background-color: var(--first-color);
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.2s, color 0.2s;
+}
+.save:hover {
+	color: var(--first-color);
+	background-color: var(--bg-color);
+}
